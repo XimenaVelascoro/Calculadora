@@ -63,14 +63,22 @@ va a adjuntar antes o despues de un selector */
 /*aqui voy a configurar la pantalla de la calculadora 
 donde se van a ver las operaciones funcionar */
 #display{
-    margin: 0 10px;
-    height: 150px;
+    margin: 2rem 5rem;
+    height: 6rem;
     width: auto;
-    content: "";
-    color: aqua;
-    max-width: 270px;
+    max-width: 12rem;
     display: flex;
     align-items: flex-end;
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    overflow-x: scroll;
+
+}
+/* overflow es eccedente y nos permite decidir que hacer con el eccedente 
+que podamos tener en un contenedor .. overflow-x: scroll realmente
+no veo porque sucede */
+/*aqui abajo se personaliza la barra de desplazamiento que se hizo arriba */
+#display::-webkit-scrollbar{
+    display: block;
+    height: 1rem;
 }
