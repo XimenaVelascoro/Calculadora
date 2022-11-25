@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <!---Primero hacemos los div donde podremos configurar los 
+    estilos de la calculadora como en modo oscuro o claro
+2tema oscuro, 3 theme 4icono del theme 
+los hermanos del icono seran el display y los botones
+esos botones los organizamos en una tabla con
+td: celda de la tabla(porque table es de los unicos padre que puede 
+contener bien estas celdas para el fin que las quiero  que aqui es 
+tener botones en filas )  tr: filas de la tabla th: define el encabezado de las celdas
+ahora los botones tienen una clase para diferenciarlos entre numeros y operadores
+rospan me permite que el igual se extienda a 2 filas y si diseño sea mas lindo
+-->
+    <div class="container">
+        <div class="calculator-dark">
+            <div class="theme-toggler-on">
+                <i class="toggler-icon"></i>
+            </div>
+            <div class="display-screen">
+                <div class="display"></div>
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td><button class="btn-o" id="clear">C</button></td>
+                        <td><button class="btn-o" id="/">÷</button></td>
+                        <td><button class="btn-o" id="*">&times;</button></td>
+                        <td><button class="btn-o" id="backspace">></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-n" id="7">7</button></td>
+                        <td><button class="btn-n" id="8">8</button></td>
+                        <td><button class="btn-n" id="9">9</button></td>
+                        <td><button class="btn-o" id="-">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-n" id="4">4</button></td>
+                        <td><button class="btn-n" id="5">5</button></td>
+                        <td><button class="btn-n" id="6">6</button></td>
+                        <td><button class="btn-o" id="+">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-n" id="1">1</button></td>
+                        <td><button class="btn-n" id="2">2</button></td>
+                        <td><button class="btn-n" id="3">3</button></td>
+                        <td rowspan="2"><button class="btn-o" id="equal">=</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-n" id="(">(</button></td>
+                        <td><button class="btn-n" id="0">0</button></td>
+                        <td><button class="btn-n" id=")">)</button></td>
+                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
