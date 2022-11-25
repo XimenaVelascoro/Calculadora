@@ -27,7 +27,7 @@ body{
     width: 100%;
     display: grid;
     place-items: center;
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-right: 5rem;
 }
 /* Aqui le daremos posicion relativa a la calculadora le di medidas auto un margen por fuera de 
@@ -81,4 +81,12 @@ no veo porque sucede */
 #display::-webkit-scrollbar{
     display: block;
     height: 1rem;
+}
+button{
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 30%;
+    margin: 0.20rem;
+    font-size: 1rem;
 }
