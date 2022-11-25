@@ -3,7 +3,74 @@
     margin: 0;
     box-sizing: border-box; 
     transition: all 0.8s ease;
+
+}
+@font-face {
+    font-family: texto;
+    src: url(font/ShadowsIntoLight-Regular.ttf);
 }
 body{
-    
+    font-family: texto;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    background: url(img/18938782_v1020-12b.jpg) ;
+    background-size:cover;
+   
+}
+/*aqui utilizaremos grilla para centrar el contenido */
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 10rem;
+    margin-right: 5rem;
+}
+/* Aqui le daremos posicion relativa a la calculadora le di medidas auto un margen por fuera de 
+2 rem para poderla modificar para la parte responsive lo mismo con el borde y su sombra*/
+.calculator-dark{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5rem #fff;
+}
+.theme-toggler-on{
+    position: absolute;
+    color: #333;
+}
+.theme-toggler-on::after{
+    background-color: #fff;
+}
+/* el content ""(en este caso es el boton de modo claro u oscuro )
+ se usa en pseudo elementos de after y before para generar contenido que se 
+va a adjuntar antes o despues de un selector */
+.theme-toggler-on::before{
+    background-color: #C060A1;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+/*aqui voy a configurar la pantalla de la calculadora 
+donde se van a ver las operaciones funcionar */
+#display{
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    content: "";
+    color: aqua;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
