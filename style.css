@@ -32,7 +32,6 @@ body {
     width: 50%;
     display: grid;
     place-items: center;
-    margin-top: 2rem;
     padding: 1rem 1rem 1rem 1rem ;
 }
 
