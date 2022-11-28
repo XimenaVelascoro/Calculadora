@@ -1,38 +1,44 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; 
-    transition: all 0.8s ease;
+    box-sizing: border-box;
+    
 
 }
+
 @font-face {
     font-family: texto;
-    src: url(font/ShadowsIntoLight-Regular.ttf);
+    src: url(font/Sometimes\ Error\ Happens.ttf);
 }
-body{
+
+body {
     font-family: texto;
 }
-a{
+
+a {
     text-decoration: none;
     color: #fff;
 }
-body{
-    background: url(img/18938782_v1020-12b.jpg) ;
-    background-size:cover;
-   
+
+body {
+    background: url(img/18938782_v1020-12b.jpg);
+    background-size: cover;
+
 }
+
 /*aqui utilizaremos grilla para centrar el contenido */
-.container{
-    height: 100%;
-    width: 100%;
+.container {
+    height: 50%;
+    width: 50%;
     display: grid;
     place-items: center;
-    margin-top: 5rem;
-    margin-right: 5rem;
+    margin-top: 2rem;
+    padding: 1rem 1rem 1rem 1rem ;
 }
+
 /* Aqui le daremos posicion relativa a la calculadora le di medidas auto un margen por fuera de 
 2 rem para poderla modificar para la parte responsive lo mismo con el borde y su sombra*/
-.calculator-dark{
+.calculator-dark {
     position: relative;
     height: auto;
     width: auto;
@@ -40,17 +46,20 @@ body{
     border-radius: 1rem;
     box-shadow: 0 0 5rem #fff;
 }
-.theme-toggler-on{
+
+.theme-toggler-on {
     position: absolute;
     color: #333;
 }
-.theme-toggler-on::after{
+
+.theme-toggler-on::after {
     background-color: #fff;
 }
+
 /* el content ""(en este caso es el boton de modo claro u oscuro )
  se usa en pseudo elementos de after y before para generar contenido que se 
 va a adjuntar antes o despues de un selector */
-.theme-toggler-on::before{
+.theme-toggler-on::before {
     background-color: #C060A1;
     content: "";
     height: 1rem;
@@ -60,9 +69,10 @@ va a adjuntar antes o despues de un selector */
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
+
 /*aqui voy a configurar la pantalla de la calculadora 
 donde se van a ver las operaciones funcionar */
-#display{
+#display {
     margin: 2rem 5rem;
     height: 6rem;
     width: auto;
@@ -74,66 +84,78 @@ donde se van a ver las operaciones funcionar */
     overflow-x: scroll;
 
 }
+
 /* overflow es eccedente y nos permite decidir que hacer con el eccedente 
 que podamos tener en un contenedor .. overflow-x: scroll realmente
 no veo porque sucede */
 /*aqui abajo se personaliza la barra de desplazamiento que se hizo arriba */
-#display::-webkit-scrollbar{
+#display::-webkit-scrollbar {
     display: block;
     height: 1rem;
 }
-button{
+
+button {
     height: 3rem;
     width: 3rem;
     border: none;
     border-radius: 50%;
     margin: 0.20rem;
     font-size: 1rem;
-    cursor:grab;
+    cursor: grab;
     transition: all 200ms ease;
 }
+
 /*con la etiqueta cursor puedo personalizar como se verá el cursor en la parte de los botones */
-button:hover{
+button:hover {
     transform: scale(1.1);
 }
+
 /*transform: trasnlate es para que en el momento que el mouse esta encima de un 
 objeto se mueva o en 2d o en 3d segun las coordenadas x,y, y z. las medidas
 se pueden dar  en px, rem, em o %  si es negativo sera en x hacia arriba del objeto
 y hacia el lado izq del objeto  con z funciona es la profundidad del objeto*/
 /* con escale modifica el tamaño en un plano 2d y puede cambiar las dimensiones
 horizontal, vertical y a diferentes escalas*/
-#equal{
+#equal {
     height: 7rem;
     width: 3rem;
-    border-radius:  3rem;
+    border-radius: 3rem;
 }
+
 /*light theme */
-.calculator{
-    background-color: rgba(255, 255, 255, 0.342);/*blanco*/
+.calculator {
+    background-color: rgba(255, 255, 255, 0.342);
+    /*blanco*/
 }
-.calculator #display{
+
+.calculator #display {
     color: #0a1e23;
 }
-.calculator #clear{
+
+.calculator #clear {
     background-color: #ffd5d8;
     color: #fc4552;
 }
-.calculator  .btn-n{
+
+.calculator .btn-n {
     background-color: #c3eaff;
     color: #000;
 }
-.calculator .btn-o{
+
+.calculator .btn-o {
     background-color: #ffd0fd;
     color: #e657e1;
 }
-.calculator .btn-equal{
+
+.calculator .btn-equal {
     background-color: #adf9e7;
     color: #000;
 }
+
 /*aqui defini los colores de los botones de fondo y caracter*/
 
 /*dark theme*/
-
+/*
 .calculator-dark{
     background-color:#071115  ;
 }
@@ -156,4 +178,22 @@ horizontal, vertical y a diferentes escalas*/
 .calculator-dark .btn-equal{
     background-color: #223323;
     color: #fff;
+}
+*/
+@media (max-width:810px) {
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        height: 70%;
+        width: 70%;
+    }
+}
+
+@media (max-width:384px) {
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
 }
