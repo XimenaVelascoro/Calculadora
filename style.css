@@ -86,7 +86,74 @@ button{
     height: 3rem;
     width: 3rem;
     border: none;
-    border-radius: 30%;
+    border-radius: 50%;
     margin: 0.20rem;
     font-size: 1rem;
+    cursor:grab;
+    transition: all 200ms ease;
+}
+/*con la etiqueta cursor puedo personalizar como se verá el cursor en la parte de los botones */
+button:hover{
+    transform: scale(1.1);
+}
+/*transform: trasnlate es para que en el momento que el mouse esta encima de un 
+objeto se mueva o en 2d o en 3d segun las coordenadas x,y, y z. las medidas
+se pueden dar  en px, rem, em o %  si es negativo sera en x hacia arriba del objeto
+y hacia el lado izq del objeto  con z funciona es la profundidad del objeto*/
+/* con escale modifica el tamaño en un plano 2d y puede cambiar las dimensiones
+horizontal, vertical y a diferentes escalas*/
+#equal{
+    height: 7rem;
+    width: 3rem;
+    border-radius:  3rem;
+}
+/*light theme */
+.calculator{
+    background-color: rgba(255, 255, 255, 0.342);/*blanco*/
+}
+.calculator #display{
+    color: #0a1e23;
+}
+.calculator #clear{
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+.calculator  .btn-n{
+    background-color: #c3eaff;
+    color: #000;
+}
+.calculator .btn-o{
+    background-color: #ffd0fd;
+    color: #e657e1;
+}
+.calculator .btn-equal{
+    background-color: #adf9e7;
+    color: #000;
+}
+/*aqui defini los colores de los botones de fondo y caracter*/
+
+/*dark theme*/
+
+.calculator-dark{
+    background-color:#071115  ;
+}
+.calculator-dark #display{
+    color: #F8fafd;
+
+}
+.calculator-dark #clear{
+    background-color: #2d191e;
+    color: #bd3740;
+}
+.calculator-dark .btn-n{
+    background-color: #1b2f38;
+    color: #f8fafb;
+}
+.calculator-dark .btn-o{
+    background-color: #2e1f39;
+    color: #aa00a4;
+}
+.calculator-dark .btn-equal{
+    background-color: #223323;
+    color: #fff;
 }
