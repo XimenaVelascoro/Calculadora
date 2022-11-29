@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+# Calculadora
+>>>>>>> b709303083765648263497b364e245a90c1cf2b9
 Logre por medio de un video tutorial hacer funcionar
 una calculadora con operaciones basicas, al principio tenia una idea diferente 
 y ya haciendo una retroalimentación entendi con desde Javascript se pudo lograr 
